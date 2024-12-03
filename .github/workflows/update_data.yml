@@ -1,0 +1,33 @@
+name: Update Fear & Greed Data
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Runs every hour at minute 0
+  workflow_dispatch: # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+
+      - name: Run data fetch script
+        run: node fetch_data.js
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data.json last_timestamp.txt
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update fear & greed data [skip ci]" && git push)

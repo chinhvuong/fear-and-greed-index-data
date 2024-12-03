@@ -1,0 +1,9 @@
+{
+  "name": "fear-greed-tracker",
+  "version": "1.0.0",
+  "description": "Track CoinMarketCap Fear & Greed Index",
+  "main": "fetch_data.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
