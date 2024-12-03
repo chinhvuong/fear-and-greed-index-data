@@ -6,7 +6,8 @@ const TIMESTAMP_FILE = "last_timestamp.txt";
 async function getLastTimestamp() {
   try {
     const timestamp = await fs.readFile(TIMESTAMP_FILE, "utf8");
-    return parseInt(timestamp.trim());
+    const ts = parseInt(timestamp.trim());
+    return ts - (ts % 86400) - 1; // Round down to start of day
   } catch (err) {
     // If file doesn't exist, return timestamp from 30 days ago
     return Math.floor(Date.now() / 1000) - 30 * 24 * 60 * 60;
@@ -59,6 +60,10 @@ async function fetchFearGreedData() {
 
     // Fetch new data using curl
     const newData = await execCurl(startTimestamp, endTimestamp);
+    console.log(
+      "🚀 ~ file: fetch_data.js:63 ~ fetchFearGreedData ~ newData:",
+      newData.data.dataList[1]
+    );
     if (!newData.data?.dataList) {
       console.log("No new data fetched", startTimestamp, endTimestamp);
       return;
@@ -87,10 +92,27 @@ async function fetchFearGreedData() {
 
     // Merge the data
     if (existingData.data?.dataList) {
-      existingData.data.dataList = [
-        ...existingData.data.dataList,
-        ...newData.data.dataList,
-      ];
+      for (const newItem of newData.data.dataList) {
+        let existingItem;
+        for (let i = existingData.data.dataList.length - 1; i >= 0; i--) {
+          const item = existingData.data.dataList[i];
+          if (parseInt(item.timestamp) <= parseInt(newItem.timestamp)) {
+            if (item.timestamp === newItem.timestamp) {
+              existingItem = item;
+              existingData.data.dataList[i] = newItem;
+              console.log(
+                "🚀 ~ file: fetch_data.js:103 ~ fetchFearGreedData ~ existingData.data.dataList[i]:",
+                existingData.data.dataList[i],
+                newItem
+              );
+            }
+            break;
+          }
+        }
+        if (!existingItem) {
+          existingData.data.dataList.push(newItem);
+        }
+      }
     } else {
       existingData.data.dataList = newData.data.dataList;
     }
@@ -106,7 +128,7 @@ async function fetchFearGreedData() {
     // Save the last timestamp for next run
     if (newData.data.dataList.length > 0) {
       const lastTimestamp = parseInt(
-        newData.data.dataList[newData.data.dataList.length - 1].timestamp
+        newData.data.dataList[newData.data.dataList.length - 2].timestamp
       );
       await saveLastTimestamp(lastTimestamp);
     }
