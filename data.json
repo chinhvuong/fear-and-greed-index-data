@@ -9940,6 +9940,20 @@
         "timestamp": "1736463190",
         "btcPrice": "92447.42",
         "btcVolume": "62094186359.36"
+      },
+      {
+        "score": 49,
+        "name": "Neutral",
+        "timestamp": "1736380800",
+        "btcPrice": "95043.49",
+        "btcVolume": "62777261693.16"
+      },
+      {
+        "score": 43,
+        "name": "Neutral",
+        "timestamp": "1736469490",
+        "btcPrice": "92496.43",
+        "btcVolume": "63199942138.79"
       }
     ],
     "dialConfig": [
@@ -9971,24 +9985,24 @@
     ],
     "historicalValues": {
       "now": {
-        "score": 49,
+        "score": 43,
         "name": "Neutral",
-        "timestamp": "1736463190"
+        "timestamp": "1736469490"
       },
       "yesterday": {
-        "score": 54,
+        "score": 49,
         "name": "Neutral",
-        "timestamp": "1736294400"
+        "timestamp": "1736380800"
       },
       "lastWeek": {
-        "score": 51,
+        "score": 57,
         "name": "Neutral",
-        "timestamp": "1735776000"
+        "timestamp": "1735862400"
       },
       "lastMonth": {
-        "score": 83,
-        "name": "Extreme greed",
-        "timestamp": "1733702400"
+        "score": 76,
+        "name": "Greed",
+        "timestamp": "1733788800"
       },
       "yearlyHigh": {
         "score": 92,
@@ -10003,10 +10017,10 @@
     }
   },
   "status": {
-    "timestamp": "2025-01-09T23:08:15.436Z",
+    "timestamp": "2025-01-10T00:40:32.795Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "11",
+    "elapsed": "2",
     "credit_count": 0
   }
 }
