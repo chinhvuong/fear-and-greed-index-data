@@ -13543,10 +13543,10 @@
     }
   },
   "status": {
-    "timestamp": "2025-01-31T11:06:40.304Z",
+    "timestamp": "2025-01-31T12:14:29.574Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "12",
+    "elapsed": "1",
     "credit_count": 0
   }
 }
