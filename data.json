@@ -13529,20 +13529,15 @@
         "name": "Neutral",
         "timestamp": "1738282090"
       },
-      "yesterday": {
-        "score": 54,
-        "name": "Neutral",
-        "timestamp": "1738281600"
-      },
       "lastWeek": {
-        "score": 61,
+        "score": 60,
         "name": "Greed",
-        "timestamp": "1737763200"
+        "timestamp": "1737849600"
       },
       "lastMonth": {
-        "score": 49,
+        "score": 51,
         "name": "Neutral",
-        "timestamp": "1735689600"
+        "timestamp": "1735776000"
       },
       "yearlyHigh": {
         "score": 92,
@@ -13557,10 +13552,10 @@
     }
   },
   "status": {
-    "timestamp": "2025-02-01T23:07:01.029Z",
+    "timestamp": "2025-02-02T00:41:21.245Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "11",
+    "elapsed": "2",
     "credit_count": 0
   }
 }
