@@ -14488,10 +14488,10 @@
     }
   },
   "status": {
-    "timestamp": "2025-02-08T06:10:04.425Z",
+    "timestamp": "2025-02-08T07:06:42.608Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "12",
+    "elapsed": "1",
     "credit_count": 0
   }
 }
