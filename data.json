@@ -17603,6 +17603,20 @@
         "timestamp": "1740697690",
         "btcPrice": "84408.21",
         "btcVolume": "53255688406.72"
+      },
+      {
+        "score": 20,
+        "name": "Fear",
+        "timestamp": "1740614400",
+        "btcPrice": "84076.86",
+        "btcVolume": "52659591953.61"
+      },
+      {
+        "score": 21,
+        "name": "Fear",
+        "timestamp": "1740703090",
+        "btcPrice": "84438.99",
+        "btcVolume": "52458116481.92"
       }
     ],
     "dialConfig": [
@@ -17634,24 +17648,24 @@
     ],
     "historicalValues": {
       "now": {
-        "score": 20,
+        "score": 21,
         "name": "Fear",
-        "timestamp": "1740697690"
+        "timestamp": "1740703090"
       },
       "yesterday": {
-        "score": 26,
+        "score": 20,
         "name": "Fear",
-        "timestamp": "1740528000"
+        "timestamp": "1740614400"
       },
       "lastWeek": {
-        "score": 40,
+        "score": 43,
         "name": "Neutral",
-        "timestamp": "1740009600"
+        "timestamp": "1740096000"
       },
       "lastMonth": {
-        "score": 55,
+        "score": 53,
         "name": "Neutral",
-        "timestamp": "1737936000"
+        "timestamp": "1738022400"
       },
       "yearlyHigh": {
         "score": 92,
@@ -17659,17 +17673,17 @@
         "timestamp": "1710201600"
       },
       "yearlyLow": {
-        "score": 26,
+        "score": 20,
         "name": "Fear",
-        "timestamp": "1725667200"
+        "timestamp": "1740614400"
       }
     }
   },
   "status": {
-    "timestamp": "2025-02-27T23:08:28.758Z",
+    "timestamp": "2025-02-28T00:40:31.392Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "11",
+    "elapsed": "1",
     "credit_count": 0
   }
 }
