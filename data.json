@@ -45484,6 +45484,13 @@
         "timestamp": "1755091390",
         "btcPrice": "120553.99",
         "btcVolume": "74187654947.80"
+      },
+      {
+        "score": 63,
+        "name": "Greed",
+        "timestamp": "1755094090",
+        "btcPrice": "122080.36",
+        "btcVolume": "76192043746.81"
       }
     ],
     "dialConfig": [
@@ -45517,7 +45524,7 @@
       "now": {
         "score": 63,
         "name": "Greed",
-        "timestamp": "1755091390"
+        "timestamp": "1755094090"
       },
       "yesterday": {
         "score": 60,
@@ -45547,10 +45554,10 @@
     }
   },
   "status": {
-    "timestamp": "2025-08-13T13:28:03.116Z",
+    "timestamp": "2025-08-13T14:11:05.966Z",
     "error_code": "0",
     "error_message": "SUCCESS",
-    "elapsed": "4",
+    "elapsed": "2",
     "credit_count": 0
   }
 }
