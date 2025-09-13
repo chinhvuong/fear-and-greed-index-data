@@ -50692,6 +50692,13 @@
         "timestamp": "1757771590",
         "btcPrice": "115740.95",
         "btcVolume": "44619159342.39"
+      },
+      {
+        "score": 53,
+        "name": "Neutral",
+        "timestamp": "1757775190",
+        "btcPrice": "115877.01",
+        "btcVolume": "43683291967.97"
       }
     ],
     "dialConfig": [
@@ -50725,7 +50732,7 @@
       "now": {
         "score": 53,
         "name": "Neutral",
-        "timestamp": "1757771590"
+        "timestamp": "1757775190"
       },
       "yesterday": {
         "score": 50,
@@ -50755,7 +50762,7 @@
     }
   },
   "status": {
-    "timestamp": "2025-09-13T14:06:43.362Z",
+    "timestamp": "2025-09-13T15:06:37.039Z",
     "error_code": "0",
     "error_message": "SUCCESS",
     "elapsed": "15",
